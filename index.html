@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Spotify</title>
   </head>
@@ -11,32 +13,41 @@
     <div class="wrapper">
       <!-- main -->
       <main class="main">
-        <section class="main-nav">
-          <section class="main-nav-header">
-            <ul>
-              <li>link</li>
-              <li>link</li>
-              <li>link</li>
+        <section class="main-navbar">
+          <section class="main-navbar-logo">
+            <img src="img/logo.svg" alt="logo">
+            <ul class="menu">
+              <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+              <li class="font-color-white-opacity"><a href="#"><i class="fas fa-search"></i>Cerca</a></li>
+              <li class="font-color-white-opacity"><a href="#"><i class="fas fa-swatchbook"></i>La tua libreria</a></li>
             </ul>
           </section>
-          <section>
-            <h2>PLAYLIST</h2>
-            <a href="">Crea Playlist</a>
+          <section class="main-navbar-playlist">
+            <h3 class="font-color-white">PLAYLIST</h3>
+            <a class="btn-crea" href="">+</a><span><a href="#">Crea Playlist</a></span>
           </section>
-          <section class="main-nav-main">
+          <section class="main-navbar-name">
             <ul class="playlist">
-              <li>Nome Playlist</li>
-              <li>Nome Playlist</li>
-              <li>Nome Playlist</li>
-              <li>Nome Playlist</li>
-              <li>Nome Playlist</li>
-              <li>Nome Playlist</li>
-              <li>Nome Playlist</li>
-              <li>Nome Playlist</li>
+              <li><a href="#">Nome Playlist</a>
+              </li>
+              <li><a href="#">Nome Playlist</a>
+              </li>
+              <li><a href="#">Nome Playlist</a>
+              </li>
+              <li><a href="#">Nome Playlist</a>
+              </li>
+              <li><a href="#">Nome Playlist</a>
+              </li>
+              <li><a href="#">Nome Playlist</a>
+              </li>
+              <li><a href="#">Nome Playlist</a>
+              </li>
             </ul>
           </section>
-          <section class="main-nav-footer">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          <section class="main-navbar-download">
+            <a href="#"><img src="img/download.svg" alt="icona download"></a><span> <a href="#">Installa app</a></span>
+            <hr>
+            <h4 class="font-color-white"><i class="fas fa-user-circle"></i>John Doe</h4>
           </section>
         </section>
         <section class="main-content">
