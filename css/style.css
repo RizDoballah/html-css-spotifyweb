@@ -41,6 +41,10 @@ body {
   width: 50%;
   margin: 10px 10px;
 }
+.main-navbar-logo .small {
+  display: none;
+}
+
 .menu li a {
   padding: 15px;
   text-decoration: none;
@@ -166,4 +170,46 @@ body {
   width: 100%;
   height: 90px;
   background-color: pink;
+}
+/* Media Queries*/
+@media screen and (max-width: 992px) and (min-width: 768px) {
+
+}
+@media screen and (max-width: 768px) and (min-width: 568px) {
+
+}
+@media screen and (max-width: 568px) {
+  .main-navbar {
+    width: 50px;
+    align-items: center;
+  }
+  .main-navbar-logo .small {
+    display: block;
+    width: 35%;
+    margin: 5px 20px;
+  }
+  .main-navbar-logo img,
+  .main-navbar-logo span,
+  .main-navbar-playlist,
+  .main-navbar-name,
+  .main-navbar-download span,
+  .main-navbar-download hr {
+    display: none;
+  }
+  .main-navbar-download img {
+    width: 30%;
+  }
+  .main-navbar-download i {
+    margin-left: 5px;
+  }
+  .main-navbar-logo i {
+    font-size: 1.5em;
+  }
+  .main-content {
+    width: calc(100% - 50px);
+  }
+  .call-to-action {
+    width: calc(100% - 50px);
+  }
+
 }
