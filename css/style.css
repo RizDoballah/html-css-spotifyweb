@@ -16,6 +16,19 @@ body {
   color: #fff;
   opacity: .5;
 }
+.font-h2 {
+  margin-top: 30px;
+  margin-left: 15px;
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+}
+.font-h4 {
+  margin: 15px 15px;
+  color: #fff;
+  opacity: .5;
+  font-weight: normal;
+}
 .wrapper {
   width: 100%;
   height: 100vh;
@@ -41,21 +54,29 @@ body {
   width: 50%;
   margin: 10px 10px;
 }
+.main-navbar-logo .menu img {
+  width: 10%;
+  vertical-align: middle;
+  opacity: .8;
+}
 .main-navbar-logo .small {
   display: none;
 }
-.menu li a {
-  padding: 15px;
+.main-navbar-logo .menu li a {
+  padding: 5px;
   text-decoration: none;
   color: #fff;
+  opacity: .5;
 }
-.main-navbar-logo li a:hover {
+.main-navbar-logo .menu li:first-child a {
+  opacity: 1;
+  border-left: 2px solid lime;
+}
+.main-navbar-logo li a:hover,
+.main-navbar-logo .menu img:hover {
   opacity: 1;
 }
-.menu li a i {
-  padding: 5px;
-  color: #fff;
-}
+
 /* main-navbar-playlist */
 .main-navbar-playlist h3 {
   font-size: 1.2em;
@@ -107,7 +128,7 @@ body {
 }
 /* main-navbar-download */
 .main-navbar-download img {
-  width: 5%;
+  width: 10%;
   margin-left: 15px;
   vertical-align: middle;
 }
@@ -118,6 +139,14 @@ body {
   opacity: .5;
   font-size: 8px;
 }
+.main-navbar-download .profile {
+  padding: 2px;
+  margin-right: 8px;
+  margin-bottom: 5px;
+  background-color: grey;
+  border-radius: 10px;
+  vertical-align: middle;
+}
 .main-navbar-download a:hover {
   opacity: 1;
 }
@@ -126,6 +155,7 @@ body {
   width: 80%;
   margin-left: 15px;
   margin-top: 5px;
+  margin-bottom: 10px;
 }
 .main-navbar-download h4 {
   font-size: 1em;
@@ -168,7 +198,7 @@ body {
   transition: 1s;
 }
 .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 /* Main-content-menu*/
 .main-content-menu {
@@ -200,46 +230,221 @@ body {
   margin-left: 25px;
 }
 /* Recently-played */
-.recently-played h2 {
-  margin: 30px 15px;
-  color: #fff;
-  font-size: 2em;
-  font-weight: bold;
-}
 .flex-container {
   list-style: none;
   display: flex;
-  align-items: center;
   margin: 0 10px;
   text-align: center;
 }
 .flex-container li {
+  position: relative;
+  margin-top: 20px;
   flex-basis: calc(100% / 6);
 }
-
 .flex-container li img {
   width: 100%;
   padding: 5px;
+}
+.flex-container li img:hover {
+  opacity: .5;
+}
+.flex-container li:hover .layover {
+  display: block;
 }
 .flex-container li h3 {
   margin-top: 10px;
   color: #fff;
   font-weight: bold;
 }
-
-.flex-container li h4 {
-  margin-top: 5px;
+.layover {
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #fff;
-  opacity: .5;
-  font-weight: normal;
+  font-size: 56px;
 }
 
+/* Creato-per */
+/* Artisti */
+.artisti li img {
+  border-radius: 50%;
+}
 /* footer */
 .footer {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
   width: 100%;
   height: 80px;
-  background-color: pink;
+  background-color: #282828;
 }
+.brano {
+  display: flex;
+  align-items:  center;
+}
+.brano .title {
+ margin-right: 20px;
+}
+.title h4 {
+  font-size: 8px;
+  color: #fff;
+}
+.title h5 {
+  font-size: 6px;
+  color: #fff;
+  opacity: .5;
+}
+.title a {
+  text-decoration: none;
+}
+.title a:hover {
+  color: #fff;
+  text-decoration: underline;
+  opacity: 1;
+}
+.brano img {
+  margin: 20px 10px;
+  width: 5%;
+  vertical-align: middle;
+}
+.brano .title {
+  display: inline-block;
+}
+.icon a i {
+  padding: 3px;
+  text-decoration: none;
+  font-size: 10px;
+  color: #fff;
+  opacity: .5;
+}
+.icon a i:hover {
+  opacity: 1;
+}
+.play {
+  margin-top: 15px;
+  margin-left: -200px;
+}
+.play::after  {
+  position: relative;
+  content: "";
+  display: block;
+  width: 350px;
+  height: 3px;
+  background-color: #fff;
+  opacity: .1;
+}
+.play ul {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+  list-style: none;
+}
+.play ul li{
+  display: inline-block;
+}
+.play i {
+  font-size: 14px;
+  color: #fff;
+  padding: 5px;
+  transition: 1s;
+}
+.play i:hover {
+  transform: scale(1.2);
+}
+.play-layover {
+  position: absolute;
+  width: 150px;
+  height: 3px;
+  background-color: #fff;
+  opacity: .5;
+}
+.play:hover .play-layover {
+  background-color: lime;
+  opacity: 1;
+}
+.play:hover .play-layover i {
+  display: block;
+}
+.play .play-layover i {
+  display: none;
+  position: absolute;
+  top: -15px;
+  left: 80px;
+  font-size: 10px;
+}
+.play-layover .primo {
+  position: absolute;
+  top: -2px;
+  left: -30px;
+}
+.play-layover .secondo {
+  position: absolute;
+  top: -2px;
+  left: 370px;
+}
+.play span {
+  font-size: 6px;
+  color: #fff;
+}
+.sound {
+  margin-top: 30px;
+  margin-right: 10px;
+}
+.sound .sound-bar {
+  list-style: none;
+}
+.sound .sound-bar li {
+  display: inline-block;
+}
+.sound .sound-bar li a {
+  text-decoration: none;
+}
+.sound .sound-bar li a i {
+  font-size: 8px;
+  color: #fff;
+  padding: 8px;
+  transition: 1s;
+}
+.sound i:hover {
+  transform: scale(1.2);
+}
+.sound-bar::after  {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 3px;
+  background-color: #fff;
+  opacity: .1;
+  margin-left: 5px;
+}
+.sound-layover {
+  position: relative;
+  margin-top: -12px;
+  margin-left: 85px;
+  width: 40px;
+  height: 3px;
+  background-color: #fff;
+  opacity: .5;
+
+}
+.sound .sound-layover i {
+  display: none;
+  position: absolute;
+  top: -5px;
+  left: 40px;
+  font-size: 12px;
+  color: #fff;
+}
+.sound:hover .sound-layover {
+  background-color: lime;
+  opacity: 1;
+}
+.sound:hover .sound-layover i {
+  display: block;
+}
+
 /* Media Queries*/
 @media screen and (max-width: 992px) and (min-width: 768px) {
   .flex-container {
@@ -248,12 +453,23 @@ body {
   .flex-container li {
     flex-basis: calc(100% / 4);
   }
-
 }
 @media screen and (max-width: 768px) and (min-width: 568px) {
+  .flex-container {
+    flex-wrap: wrap;
+  }
+  .flex-container li {
+    flex-basis: calc(100% / 2);
+  }
 
 }
 @media screen and (max-width: 568px) {
+  .flex-container {
+    flex-wrap: wrap;
+  }
+  .flex-container li {
+    flex-basis: calc(100% / 2);
+  }
   .main-navbar {
     width: 50px;
     align-items: center;
