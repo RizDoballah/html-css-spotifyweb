@@ -13,9 +13,11 @@
     <div class="wrapper">
       <!-- main -->
       <main class="main">
+        <!-- main-navbar -->
         <section class="main-navbar">
+          <!-- main-navbar-logo -->
           <section class="main-navbar-logo">
-            <img src="img/logo.svg" alt="logo">
+            <img class="logo" src="img/logo.svg" alt="logo">
             <img class="small" src="img/logo-small.svg" alt="">
             <ul class="menu">
               <li><a href="#"><img src="img/home.svg" alt=""><span>Home</span></a></li>
@@ -23,10 +25,14 @@
               <li><a href="#"><img src="img/libreria.svg" alt=""><span>La tua libreria</span></a></li>
             </ul>
           </section>
+          <!-- /main-navbar-logo -->
+          <!-- main-navbar-playlist -->
           <section class="main-navbar-playlist">
             <h3 class="font-color-white">PLAYLIST</h3>
             <a class="btn-crea" href="">+</a><span><a href="#">Crea Playlist</a></span>
           </section>
+          <!-- /main-navbar-playlist -->
+          <!-- main-navbar-name -->
           <section class="main-navbar-name">
             <ul class="playlist">
               <li><a href="#">Nome Playlist</a>
@@ -45,16 +51,23 @@
               </li>
             </ul>
           </section>
+          <!-- /main-navbar-name -->
+          <!-- main-navbar-download -->
           <section class="main-navbar-download">
             <a href="#"><img src="img/download.svg" alt="icona download"></a><span><a href="#">Installa app</a></span>
             <hr>
             <h4 class="font-color-white"><img class="profile" src="img/profile.svg" alt=""><span>Riz Doballah</span></h4>
           </section>
+          <!-- /main-navbar-download -->
         </section>
+        <!-- main-content-->
         <section class="main-content">
+          <!-- Call-to-action-->
           <div class="call-to-action">
             <a class="btn" href="">EFFETTUA L'UPGRAFE</a>
           </div>
+          <!-- /Call-to-action-->
+          <!-- Main-content-menu-->
           <div class="main-content-menu">
             <ul>
               <li><a class="active" href="#">IN EVIDENZA</a></li>
@@ -65,6 +78,8 @@
               <li><a href="#">SCOPRI</a></li>
             </ul>
           </div>
+          <!-- /Main-content-menu-->
+          <!-- Recently-played-->
           <div class="recently-played">
             <h2 class="font-h2">Recently played</h2>
             <ul class="flex-container">
@@ -107,6 +122,8 @@
               </li>
             </ul>
           </div>
+          <!-- /Recently-played-->
+          <!-- Creato-per-->
           <div class="creato-per">
             <h2 class="font-h2">Creato per Riz Doballah</h2>
             <h4 class="font-h4">Più ascolti, più accurati saranno i suggerementi.</h4>
@@ -121,7 +138,10 @@
                 <div class="layover"><i class="far fa-play-circle"></i></div>
                 <h3>Daily Mix 1</h3>
               </li>
+            </ul>
             </div>
+            <!-- /Creato-per-->
+            <!-- Artisti-->
             <div class="artisti">
               <h2 class="font-h2">Artisti più popolari</h2>
               <h4 class="font-h4">Più ascolti, più accurati saranno i suggerementi.</h4>
@@ -134,12 +154,15 @@
                   </li>
               </ul>
           </div>
+          <!-- /Artisti-->
         </section>
+        <!-- /main-content-->
       </main>
       <!-- /main -->
 
       <!-- footer -->
       <footer class="footer">
+        <!-- Brano -->
         <div class="brano">
           <img src="img/sinister.jpeg" alt="">
           <div class="title">
@@ -151,36 +174,40 @@
           <a href="#"><i class="far fa-heart"></i></a>
           </div>
         </div>
-        <div class="play">
-          <ul>
-            <li><a href="#"><i class="fas fa-random"></i></a></li>
-            <li><a href="#"><i class="fas fa-step-backward"></i></a></li>
-            <li><a href="#"><i class="far fa-play-circle"></i></a></li>
-            <li><a href="#"><i class="fas fa-step-forward"></i></a></li>
-            <li><a href="#"><i class="fas fa-redo"></i></a></li>
-          </ul>
-          <div class="play-layover">
-            <span class="primo">0:25</span>
-            <i class="fas fa-circle"></i>
-            <span class="secondo">4:35</span>
+        <!-- /Brano -->
+        <!-- Player -->
+        <div class="player">
+          <div class="player-top">
+            <a href="#"><i class="fas fa-random"></i></a>
+            <a href="#"><i class="fas fa-step-backward"></i></a>
+            <a href="#"><i class="far fa-play-circle"></i></a>
+            <a href="#"><i class="fas fa-step-forward"></i></a>
+            <a href="#"><i class="fas fa-redo"></i></a>
           </div>
-        </div>
-        <div class="sound">
-          <ul class="sound-bar">
-            <li><a href="#"><i class="fas fa-bars"></i></a></li>
-            <li><a href="#"><i class="fas fa-desktop"></i></a></li>
-            <li><a href="#"><i class="fas fa-volume-up"></i></a></li>
-          </ul>
-            <div class="sound-layover">
+          <div class="player-bottom">
+            <div class="time">0:25</div>
+            <div class="bar">
+              <div class="time-elapsed"></div>
               <i class="fas fa-circle"></i>
             </div>
-
-
-
-
+            <div class="time">4:00</div>
+          </div>
         </div>
-
-      </footer>
+        <!-- /Player -->
+        <!-- Sound -->
+        <div class="sound">
+          <div class="sound-icon">
+            <a href="#"><i class="fas fa-bars"></i></a>
+            <a href="#"><i class="fas fa-desktop"></i></a>
+            <a href="#"><i class="fas fa-volume-up"></i></a>
+          </div>
+          <div class="bar">
+            <div class="time-elapsed"></div>
+            <i class="fas fa-circle"></i>
+          </div>
+        </div>
+        <!-- /Sound -->
+    </footer>
       <!-- /footer -->
 
     </div>

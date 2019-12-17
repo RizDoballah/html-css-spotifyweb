@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  min-width: 500px;
   font-size: 12px;
-  background-color: black;
 }
 .font-color-white {
   color: #fff;
@@ -40,7 +40,7 @@ body {
   height: calc(100% - 80px);
   overflow: hidden;
 }
-/* main navbar */
+/* main-navbar */
 .main-navbar {
   display: flex;
   flex-direction: column;
@@ -263,10 +263,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
+}
+.layover i.far {
   font-size: 56px;
 }
 
-/* Creato-per */
 /* Artisti */
 .artisti li img {
   border-radius: 50%;
@@ -274,25 +275,26 @@ body {
 /* footer */
 .footer {
   display: flex;
-  align-content: center;
   justify-content: space-between;
   width: 100%;
   height: 80px;
+  padding: 10px;
   background-color: #282828;
 }
 .brano {
+  width: 20%;
   display: flex;
-  align-items:  center;
+  align-items: center;
 }
 .brano .title {
- margin-right: 20px;
+  margin-right: 20px;
 }
 .title h4 {
-  font-size: 8px;
+  font-size: 12px;
   color: #fff;
 }
 .title h5 {
-  font-size: 6px;
+  font-size: 10px;
   color: #fff;
   opacity: .5;
 }
@@ -306,143 +308,101 @@ body {
 }
 .brano img {
   margin: 20px 10px;
-  width: 5%;
+  width: 20%;
   vertical-align: middle;
 }
-.brano .title {
-  display: inline-block;
-}
 .icon a i {
-  padding: 3px;
+  padding: 5px;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 12px;
   color: #fff;
   opacity: .5;
 }
 .icon a i:hover {
   opacity: 1;
 }
-.play {
-  margin-top: 15px;
-  margin-left: -200px;
+.player {
+  width: 50%;
 }
-.play::after  {
-  position: relative;
-  content: "";
-  display: block;
-  width: 350px;
-  height: 3px;
-  background-color: #fff;
-  opacity: .1;
+.player-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.play ul {
-  margin-top: 5px;
-  margin-bottom: 10px;
-  text-align: center;
-  list-style: none;
-}
-.play ul li{
-  display: inline-block;
-}
-.play i {
-  font-size: 14px;
+.player-top i {
+  margin: 0 10px;
+  font-size: 16px;
   color: #fff;
   padding: 5px;
   transition: 1s;
 }
-.play i:hover {
+i.fa-play-circle {
+  font-size: 26px;
+}
+.player-top i:hover {
   transform: scale(1.2);
 }
-.play-layover {
-  position: absolute;
-  width: 150px;
+.player-bottom {
+  display: flex;
+  align-items: center;
+}
+.time {
+  width: 10%;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+}
+.bar {
+  position: relative;
+  width: 80%;
   height: 3px;
+  border-radius: 3px;
+  background-color: grey;
+}
+.time-elapsed {
+  width: 20%;
+  height: 3px;
+  border-radius: 3px;
   background-color: #fff;
-  opacity: .5;
 }
-.play:hover .play-layover {
-  background-color: lime;
-  opacity: 1;
+.bar i {
+display: none;
+position: absolute;
+top: 50%;
+left: 20%;
+transform: translateY(-50%);
+color: #fff;
 }
-.play:hover .play-layover i {
+.player .bar:hover i {
   display: block;
 }
-.play .play-layover i {
-  display: none;
-  position: absolute;
-  top: -15px;
-  left: 80px;
-  font-size: 10px;
-}
-.play-layover .primo {
-  position: absolute;
-  top: -2px;
-  left: -30px;
-}
-.play-layover .secondo {
-  position: absolute;
-  top: -2px;
-  left: 370px;
-}
-.play span {
-  font-size: 6px;
-  color: #fff;
+.player .bar:hover .time-elapsed {
+  background-color: lime;
 }
 .sound {
-  margin-top: 30px;
-  margin-right: 10px;
+width: 25%;
+display: flex;
+align-items: center;
 }
-.sound .sound-bar {
-  list-style: none;
+.sound-icon {
+  margin-left: 15%;
+  width: 100%;
 }
-.sound .sound-bar li {
-  display: inline-block;
-}
-.sound .sound-bar li a {
-  text-decoration: none;
-}
-.sound .sound-bar li a i {
-  font-size: 8px;
-  color: #fff;
-  padding: 8px;
-  transition: 1s;
-}
-.sound i:hover {
-  transform: scale(1.2);
-}
-.sound-bar::after  {
-  content: "";
-  display: inline-block;
-  width: 100px;
-  height: 3px;
-  background-color: #fff;
-  opacity: .1;
-  margin-left: 5px;
-}
-.sound-layover {
-  position: relative;
-  margin-top: -12px;
-  margin-left: 85px;
-  width: 40px;
-  height: 3px;
-  background-color: #fff;
-  opacity: .5;
-
-}
-.sound .sound-layover i {
-  display: none;
-  position: absolute;
-  top: -5px;
-  left: 40px;
+.sound a i {
   font-size: 12px;
   color: #fff;
+  padding: 8px;
+  margin-left: 5px;
+  transition: 1s;
 }
-.sound:hover .sound-layover {
-  background-color: lime;
-  opacity: 1;
+.sound-icon i:hover {
+  transform: scale(1.2);
 }
-.sound:hover .sound-layover i {
+.sound .bar:hover i {
   display: block;
+}
+.sound:hover .time-elapsed {
+  background-color: lime;
 }
 
 /* Media Queries*/
@@ -453,6 +413,18 @@ body {
   .flex-container li {
     flex-basis: calc(100% / 4);
   }
+  .brano img {
+    width: 30%;
+  }
+  .player {
+    margin-left: 30px;
+  }
+  .sound {
+    width: 30%;
+  }
+  .sound a i {
+    margin-left: 0;
+  }
 }
 @media screen and (max-width: 768px) and (min-width: 568px) {
   .flex-container {
@@ -461,7 +433,23 @@ body {
   .flex-container li {
     flex-basis: calc(100% / 2);
   }
-
+  .brano img {
+    width: 30%;
+  }
+  .player {
+    margin-left: 60px;
+  }
+  .time {
+    width: 25%;
+  }
+  .sound {
+    width: 30%;
+  }
+  .sound a i {
+    font-size: 10px;
+    padding: 5px;
+    margin-left: 0;
+  }
 }
 @media screen and (max-width: 568px) {
   .flex-container {
@@ -476,10 +464,16 @@ body {
   }
   .main-navbar-logo .small {
     display: block;
-    width: 35%;
-    margin: 5px 20px;
+    width: 50%;
+    margin: 5px auto;
   }
-  .main-navbar-logo img,
+  .main-navbar-logo .menu img {
+    width: 40%;
+  }
+  .main-navbar-logo .menu li:first-child a {
+    border-left: none;
+  }
+  .main-navbar-logo .logo,
   .main-navbar-logo span,
   .main-navbar-playlist,
   .main-navbar-name,
@@ -488,7 +482,8 @@ body {
     display: none;
   }
   .main-navbar-download img {
-    width: 30%;
+    width: 40%;
+    margin-top: 40px;
   }
   .main-navbar-download i {
     margin-left: 5px;
@@ -502,5 +497,32 @@ body {
   .call-to-action {
     width: calc(100% - 50px);
   }
-
+  .brano img {
+    width: 30%;
+  }
+  .player {
+    margin-left: 50px;
+    width: 40%;
+  }
+  .time {
+    width: 25%;
+  }
+  .player-top i {
+    padding: 5px 0;
+    font-size: 12px;
+  }
+  i.fa-play-circle {
+    font-size: 22px;
+  }
+  .sound {
+    width: 30%;
+  }
+  .sound-icon {
+    margin-right: 0;
+  }
+  .sound a i {
+    font-size: 10px;
+    padding: 5px;
+    margin-left: 0;
+  }
 }
